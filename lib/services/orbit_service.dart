@@ -23,8 +23,7 @@ class Orbit{
       </Placemark>
     ''';
     }
-    String kmlOrbit='''
-<?xml version="1.0" encoding="UTF-8"?>
+    String kmlOrbit='''<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
   <Document>
     <StyleMap id="m_ylw-pushpin">
@@ -99,7 +98,7 @@ class Orbit{
                   <heading>$heading</heading>
                   <tilt>60</tilt>
                   <range>${range}</range>
-
+                  <gx:fovy>60</gx:fovy> 
                   <altitude>$altitude</altitude> 
                   <gx:altitudeMode>relativeToGround</gx:altitudeMode>
               </LookAt>
@@ -113,11 +112,11 @@ class Orbit{
               <gx:flyToMode>smooth</gx:flyToMode>
               <LookAt>
                   <longitude>${places[i].longitude - 0.0}</longitude>
-                  <latitude>${places[i].latitude - 0.0}</latitude>
+                  <latitude>${places[i].latitude - 0.0}</latitude>d
                   <heading>$heading</heading>
                   <tilt>60</tilt>
                   <range>${range}</range>
-                
+                  <gx:fovy>60</gx:fovy>
                   <altitude>$altitude</altitude> 
                   <gx:altitudeMode>relativeToGround</gx:altitudeMode>
               </LookAt>
